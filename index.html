@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Omar Montaser | Portfolio</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
@@ -13,12 +14,14 @@
   <header class="navbar" data-aos="fade-down">
     <h1>Omar Montaser</h1>
     <nav>
+      <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#certifications">Certifications</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </header>
 
   <!-- Hero -->
@@ -31,6 +34,21 @@
       <a href="https://linkedin.com/in/omar-montaser-b61245306" target="_blank">LinkedIn</a>
     </div>
   </section>
+  
+<!-- About -->
+<section id="about" class="section" data-aos="fade-up">
+  <h2>About Me</h2>
+  <div class="about-wrapper">
+    <div class="about-text" data-aos="fade-right">
+      <p>Hey, I’m <strong>Omar Montaser</strong> — a Computer Engineering student who loves cybersecurity, cloud, and building systems that actually make sense. I’m all about securing the cloud and understanding how tech breaks so I can fix it better.</p>
+    </div>
+    <div class="about-photo" data-aos="fade-left">
+      <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Omar Montaser">
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Experience -->
   <section id="experience" class="section">
@@ -89,10 +107,6 @@
         <a href="https://github.com/Omar-Montaser/Air-Gym" target="_blank">GitHub →</a>
       </div>
       <div class="card" data-aos="flip-left">
-        <h3>FOS Kernel (Operating Systems)</h3>
-        <p>Implemented page fault handling, system calls, and memory allocation (First Fit) in C.</p>
-      </div>
-      <div class="card" data-aos="flip-left">
         <h3>Google Cybersecurity Projects</h3>
         <p>Hands-on projects on vulnerability assessments, incident reporting, and NIST CSF framework.</p>
         <a href="https://github.com/Omar-Montaser/Google-Cybersecurity" target="_blank">GitHub →</a>
@@ -102,19 +116,79 @@
         <p>JavaFX e-commerce desktop app with layered architecture and secure authentication.</p>
         <a href="https://github.com/Omar-Montaser/E-Commerce_App" target="_blank">GitHub →</a>
       </div>
+      <div class="card" data-aos="flip-left">
+      <h3>Social Sphere</h3>
+      <p>A C++ social network simulation with graph traversal and Graphviz visualization.</p>
+      <a href="https://github.com/Omar-Montaser/Social-Sphere" target="_blank">GitHub →</a>
+    </div>
+
+    <div class="card" data-aos="flip-left">
+      <h3>2048 Game</h3>
+      <p>Recreated the 2048 Game using C++ with full grid logic and score tracking.</p>
+      <a href="https://github.com/Omar-Montaser/2048-Game" target="_blank">GitHub →</a>
+    </div>
+    <div class="card" data-aos="flip-left">
+      <h3>Fitness Tracker Website</h3>
+      <p>Nutrition and fitness tracking web app that helps users monitor calorie intake and workouts in real time.</p>
+      <a href="https://github.com/Omar-Montaser/Fitness-Tracker-Website" target="_blank">GitHub →</a>
+    </div>
+
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section">
-    <h2 data-aos="fade-up">Technical Skills</h2>
-    <div class="skills-grid" data-aos="fade-up">
-      <div><strong>Languages:</strong> C, C++, Java, Python, JavaScript</div>
-      <div><strong>Tech:</strong> SQL Server, Django, AWS, Bootstrap</div>
-      <div><strong>Cyber Tools:</strong> Suricata, TCPDump, Wireshark, Splunk, Burp Suite</div>
-      <div><strong>Collaboration:</strong> GitHub, Jira, Figma</div>
+<section id="skills" class="section">
+  <h2 data-aos="fade-up">Technical Skills</h2>
+
+  <div class="skills-container" data-aos="fade-up">
+    <div class="skill-category">
+      <h3><i class="fas fa-code"></i> Languages</h3>
+      <div class="icons">
+        <span><i class="fab fa-cuttlefish"></i> C / C++</span>
+        <span><i class="fab fa-java"></i> Java</span>
+        <span><i class="fab fa-python"></i> Python</span>
+        <span><i class="fab fa-js-square"></i> JavaScript</span>
+      </div>
     </div>
-  </section>
+
+    <div class="skill-category">
+      <h3><i class="fas fa-server"></i> Technologies</h3>
+      <div class="icons">
+        <span><i class="fas fa-database"></i> SQL Server</span>
+        <span><i class="fab fa-django"></i> Django</span>
+        <span><i class="fab fa-aws"></i> AWS</span>
+        <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
+        <span><i class="fas fa-leaf"></i> MongoDB</span>
+        <span><i class="fas fa-code-branch"></i> Express.js</span>
+        <span><i class="fab fa-react"></i> React</span>
+        <span><i class="fab fa-node-js"></i> Node.js</span>
+      </div>
+    </div>
+
+
+    <div class="skill-category">
+      <h3><i class="fas fa-shield-alt"></i> Cybersecurity Tools</h3>
+      <div class="icons">
+        <span><i class="fas fa-network-wired"></i> Suricata</span>
+        <span><i class="fas fa-bug"></i> Wireshark</span>
+        <span><i class="fas fa-tachometer-alt"></i> Splunk</span>
+        <span><i class="fas fa-spider"></i> Burp Suite</span>
+        <span><i class="fas fa-terminal"></i> TCPDump</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3><i class="fas fa-users"></i> Collaboration</h3>
+      <div class="icons">
+        <span><i class="fab fa-github"></i> GitHub</span>
+        <span><i class="fab fa-jira"></i> Jira</span>
+        <span><i class="fab fa-figma"></i> Figma</span>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
 
   <!-- Contact -->
   <section id="contact" class="section contact" data-aos="fade-up">
