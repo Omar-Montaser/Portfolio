@@ -277,7 +277,7 @@ html {
   font-weight: 600;
 }
 
-.about-photo img {
+img {
   width: 220px;
   height: 220px;
   border-radius: 50%;
@@ -286,7 +286,7 @@ html {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.about-photo img:hover {
+img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 35px rgba(155, 89, 182, 0.5);
 }
