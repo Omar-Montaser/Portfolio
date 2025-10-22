@@ -512,8 +512,8 @@ html {
 }
 
 .exp-content img {
-  width: 55px;
-  height: 55px;
+  width: 85px;
+  height: 85px;
   object-fit: contain;
   border-radius: 8px;
 }
@@ -556,10 +556,8 @@ html {
 }
 
 #certifications .logo-card img {
-  height: 140px;              /* force all logos same height */
   width: auto;
   object-fit: contain;
-  margin-bottom: 20px;        /* add spacing below logo */
   display: block;
 }
 #certifications .logo-card h4 {
@@ -571,7 +569,10 @@ html {
   margin-top: auto;
   padding-top: 10px;
 }
-
-
-
-
+#awsimg{
+  margin-top: 30px;
+  height: 100px;
+}
+#restimg{
+  height:150px;
+}
