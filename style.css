@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
+/* ---------- Base / existing styles (unchanged) ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif; /* you have Inter included in the HTML head */
   background-color: #0f0f0f;
   color: #f0f0f0;
   scroll-behavior: smooth;
@@ -151,9 +153,10 @@ body {
   background: #9b59b6;
   color: #fff;
   padding: 10px 30px;
-  border-radius: 25px;
+  border-radius: 10px;
   text-decoration: none;
   transition: 0.3s;
+  margin-right: 10px;
 }
 
 .contact-btn:hover {
@@ -177,21 +180,51 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-.timeline .entry {
-  margin-bottom: 40px;
-  text-align: left;
+/* Timeline Clean Style */
+.timeline {
+  position: relative;
   max-width: 800px;
-  margin-inline: auto;
-}
-.timeline .entry span {
-  font-size: 0.9rem;
-  color: #aaa;
-}
-.timeline ul {
-  margin-top: 10px;
+  margin: auto;
   padding-left: 20px;
-  color: #bbb;
+  border-left: 2px solid #2a2a2a;
 }
+
+.timeline .entry {
+  margin-bottom: 35px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline .entry::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #9b59b6; /* Purple accent */
+  border-radius: 50%;
+}
+
+.timeline h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.timeline span {
+  font-size: 0.9rem;
+  color: #999;
+  display: block;
+  margin-top: 2px;
+}
+
+.timeline p {
+  color: #bbbbbb;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
 
 .cert-grid {
   display: grid;
@@ -277,7 +310,7 @@ html {
   font-weight: 600;
 }
 
-img {
+.pimg {
   width: 220px;
   height: 220px;
   border-radius: 50%;
@@ -286,7 +319,7 @@ img {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-img:hover {
+.pimg:hover {
   transform: scale(1.05);
   box-shadow: 0 0 35px rgba(155, 89, 182, 0.5);
 }
@@ -336,3 +369,209 @@ img:hover {
 .icons i {
   font-size: 1.1rem;
 }
+
+/* ---------- Logo grid + card (kept but cleaned) ---------- */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.logo-card {
+  background: #1b1b1b;
+  border-radius: 12px;
+  padding: 25px 20px;
+  transition: transform 0.3s, border 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* increased to fit logo + text + date */
+  width: 240px;
+  text-align: center;
+}
+
+.logo-card img {
+  width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border: none;
+  border-radius: 8px;
+}
+
+.logo-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.logo-card:hover {
+  transform: translateY(-5px);
+  border-color: #9b59b6;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.4);
+}
+
+.logo-card img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* small specific adjustments (if you used ids for image sizes) */
+#daf-img {
+  width: 200px;
+}
+#bayan-img {
+  width: 190px;
+}
+
+/* vertical line on the left (professional gray) */
+.experience-container::before {
+  content: "";
+  position: absolute;
+  left: 20px;              /* line x-position (keeps line left of cards) */
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: #3a3a3a;     /* neutral gray line */
+  border-radius: 2px;
+  z-index: 1;
+}
+
+
+.exp-item .exp-card-wrapper {
+  display: flex;
+  justify-content: center; /* centers the logo-card inside this column */
+}
+
+/* date styling on the right */
+.exp-date {
+  text-align: right;
+  font-size: 0.92rem;
+  color: #9b9b9b;
+  font-weight: 400;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .experience-container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .experience-container::before {
+    left: 12px;
+  }
+  .exp-item {
+    grid-template-columns: 32px 1fr; 
+    grid-template-rows: auto auto;
+    gap: 12px;
+  }
+  .exp-card-wrapper {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .exp-date {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #9b9b9b;
+  }
+}
+/* --- CLEAN FLOATING TIMELINE STYLE --- */
+.experience-container {
+  width: 800px;
+  max-width: 90%;
+  margin: 50px auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.experience-container::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 2px;
+  height: 100%;
+  background-color: #444;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.exp-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.exp-content img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.exp-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.exp-content p {
+  margin: 3px 0 0;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.exp-date {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .exp-item {
+    grid-template-columns: 35px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .exp-date {
+    grid-column: 2;
+  }
+}
+/* ---- FIX CERT LOGOS ALIGNMENT + SPACING ---- */
+#certifications .logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 260px; /* keep consistent card height */
+  padding-top: 20px;
+}
+
+#certifications .logo-card img {
+  height: 140px;              /* force all logos same height */
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;        /* add spacing below logo */
+  display: block;
+}
+#certifications .logo-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;              /* remove bold */
+  font-size: 0.98rem;
+  color: #dcdcdc;                /* modern soft gray text */
+  letter-spacing: 0.3px;         /* subtle spacing = modern look */
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+
+
+

@@ -1,4 +1,3 @@
-// Typewriter effect
 const text = "Hi, I'm Omar Montaser.";
 let index = 0;
 function typeWriter() {
@@ -10,7 +9,6 @@ function typeWriter() {
 }
 window.onload = typeWriter;
 
-// Scroll reveal animations
 const sections = document.querySelectorAll(".section");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
