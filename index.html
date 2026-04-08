@@ -3,243 +3,485 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Omar Montaser | Portfolio</title>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Omar Montaser — Cybersecurity & Cloud Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
-  
-  <script defer src="script.js"></script>
 </head>
 <body>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
   <!-- Navbar -->
-  <header class="navbar" data-aos="fade-down">
-    <h1>Omar Montaser</h1>
-    <nav>
+  <header class="navbar" id="navbar">
+    <a href="#" class="logo">OM<span class="logo-dot">.</span></a>
+    <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#certifications">Certifications</a>
+      <a href="#certifications">Certs</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
-
+    <a href="images/CV.pdf" class="nav-cta" download>
+      <span>Resume</span>
+      <i class="fas fa-arrow-down"></i>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#certifications" class="mobile-link">Certifications</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
   <!-- Hero -->
-  <section class="hero" data-aos="fade-up">
-    <h2 id="typewriter"></h2>
-    <p>Cybersecurity & Cloud Engineer | BSc Computer and AI Engineering (UEL & Ain Shams)</p>
-    <div class="links" data-aos="zoom-in">
-      <a href="mailto:omarmontaser.my@gmail.com">Email</a>
-      <a href="https://github.com/Omar-Montaser" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/omar-montaser-b61245306" target="_blank">LinkedIn</a>
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-line">Omar</span>
+        <span class="hero-line accent-line">Montaser</span>
+      </h1>
+      <p class="hero-subtitle" id="typewriter"></p>
+      <p class="hero-desc">
+        Cybersecurity & Cloud Engineer. I build secure, scalable systems and love solving complex infrastructure challenges.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Omar-Montaser" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/omar-montaser-b61245306" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:omarmontaser.my@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <img src="images/me.jpeg" alt="Omar Montaser" class="hero-photo">
+        <div class="photo-ring"></div>
+        <div class="photo-ring-2"></div>
+      </div>
+      <div class="floating-badge fb-1">
+        <i class="fas fa-shield-alt"></i>
+        <span>CompTIA Security+</span>
+      </div>
+      <div class="floating-badge fb-2">
+        <i class="fab fa-aws"></i>
+        <span>AWS Architect</span>
+      </div>
+      <div class="floating-badge fb-3">
+        <i class="fas fa-graduation-cap"></i>
+        <span>GPA 3.4 / 4.0</span>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Turning complexity<br><em>into clarity.</em></h2>
+          <p>I'm Omar Montaser, a Cybersecurity and Cloud Engineer studying at the University of East London & Ain Shams University (Double Degree, GPA 3.4/4.0). I specialize in securing cloud infrastructure and building efficient, resilient systems.</p>
+          <p>During my internships I've restored hospital networks mid-outage, managed enterprise cloud environments, and conducted security audits across hundreds of workstations. I enjoy CTFs, open-source projects, and pushing my limits on platforms like TryHackMe and Codeforces.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">30+</span>
+              <span class="stat-label">University & Personal Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Teams Led</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="highlight-card">
+            <div class="hc-icon"><i class="fas fa-cloud"></i></div>
+            <div>
+              <h4>Cloud Infrastructure</h4>
+              <p>AWS Solutions Architect with hands-on experience in VPC, EC2, RDS, Lambda, IAM, and CloudFormation.</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="hc-icon"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <h4>Cybersecurity</h4>
+              <p>CompTIA Security+ certified. Skilled in SIEM, intrusion detection, vulnerability assessment, and NIST CSF.</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="hc-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <h4>Software Engineering</h4>
+              <p>Full-stack experience with Java, Python, JavaScript, Django, and React. Specialist-ranked on Codeforces.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  
-<!-- About -->
-<section id="about" class="section" data-aos="fade-up">
-  <h2>About Me</h2>
-  <div class="about-wrapper">
-    <div class="about-text" data-aos="fade-right">
-      <p>Hey, I’m <strong>Omar Montaser</strong> — a Computer Engineering student who loves cybersecurity, cloud, and building systems that actually make sense. I’m all about securing the cloud and understanding how tech breaks so I can fix it better.</p>
-    </div>
-    <div class="about-photo" data-aos="fade-left">
-      <img class="pimg" src="images/me.jpeg" alt="Omar Montaser">
-    </div>
-  </div>
-</section>
 
-<section id="experience" class="section">
-  <h2 data-aos="fade-up">Experience</h2>
+  <!-- Experience -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-label">02 / Experience</div>
+      <h2 class="section-title reveal">Where I've <em>worked.</em></h2>
 
-  <div class="experience-container">
+      <div class="exp-timeline">
 
-    <!-- Experience 1 -->
-    <div class="exp-item" data-aos="fade-up">
-      <div class="timeline-marker"></div>
-      <div class="exp-content">
-        <img src="images/bayantech.png" alt="Bayantech logo">
-        <div>
-          <h3>IT Intern – Bayantech</h3>
+        <div class="exp-entry reveal">
+          <div class="exp-connector">
+            <div class="exp-node"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <img src="images/bayantech.png" alt="Bayantech" class="exp-logo" id="bayan-logo">
+              <div class="exp-meta">
+                <h3>Information Technology Intern</h3>
+                <span class="exp-company">Bayantech · Translation & Localization</span>
+                <span class="exp-period"><i class="far fa-calendar-alt"></i> Oct – Nov 2025</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Worked with <strong>Google Cloud</strong> infrastructure and supported <strong>Sophos</strong> security administration in enterprise environments</li>
+              <li>Managed virtual machines <strong>(Hyper-V, VMware)</strong> and improved <strong>RDP</strong> session handling for multi-user access</li>
+              <li>Provided IT support (remote/on-site), resolving tickets while maintaining system configuration and asset tracking</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Google Cloud</span><span>Sophos</span><span>VMware</span><span>Hyper-V</span><span>RDP</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="exp-date">Oct 2025 – Present</div>
-    </div>
 
-    <!-- Experience 2 -->
-    <div class="exp-item" data-aos="fade-up">
-      <div class="timeline-marker"></div>
-      <div class="exp-content">
-        <img src="images/dar-alfouad.png" alt="Dar Al Fouad logo">
-        <div>
-          <h3>IT Intern – Dar Al Fouad Hospital</h3>
+        <div class="exp-entry reveal">
+          <div class="exp-connector">
+            <div class="exp-node"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <img src="images/dar-alfouad.png" alt="Dar Al Fouad" class="exp-logo" id="daf-logo">
+              <div class="exp-meta">
+                <h3>Information Technology Intern</h3>
+                <span class="exp-company">Dar Al Fouad Hospital</span>
+                <span class="exp-period"><i class="far fa-calendar-alt"></i> Aug – Oct 2025</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Restored hospital network during a <strong>major outage</strong> by rebuilding VLANs, reconfiguring switches, and resolving DHCP issues across <strong>six floors</strong>, ensuring uninterrupted SAP operations</li>
+              <li>Resolved daily IT tickets remotely via TightVNC, including OS installations and workstation recovery</li>
+              <li>Conducted asset inventory for <strong>200+ PCs</strong>, checking OS patch status, Kaspersky alerts, and system health</li>
+            </ul>
+            <div class="exp-tags">
+              <span>VLAN</span><span>DHCP</span><span>SAP</span><span>TightVNC</span><span>Kaspersky</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="exp-date">Aug 2025 – Nov 2025</div>
-    </div>
 
-  </div>
-</section>
+      </div>
+    </div>
+  </section>
 
   <!-- Certifications -->
-<section id="certifications" class="section">
-  <h2 data-aos="fade-up">Certifications</h2>
-  <div class="logo-grid">
-  
-    <div class="logo-card" data-aos="zoom-in">
-      <a href="https://www.credly.com/badges/a7dc68b7-4766-4484-9fe4-15aeb17255ff/public_url" target="_blank">
-        <img id="restimg" src="images/comptia.png" alt="CompTIA Security+">
-      </a>
-      <h4>CompTIA Security+</h4>
-    </div>
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="section-label">03 / Certifications</div>
+      <h2 class="section-title reveal">Credentials &amp; <em>recognition.</em></h2>
+      <div class="cert-grid">
 
-    <div class="logo-card" data-aos="zoom-in">
-      <a href="https://www.credly.com/badges/4d84c1ea-6ae5-45b9-996c-68eed65dd0c3/public_url" target="_blank">
-        <img id="restimg" src="images/google-cybersecurity.png" alt="Google Cybersecurity Certificate">
-      </a>
-      <h4>Google Cybersecurity Professional Certificate</h4>
-    </div>
+        <a href="https://www.credly.com/badges/a7dc68b7-4766-4484-9fe4-15aeb17255ff/public_url" target="_blank" class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="images/comptia.png" alt="CompTIA Security+">
+          </div>
+          <div class="cert-info">
+            <h4>CompTIA Security+</h4>
+            <p>Industry-standard cybersecurity certification validating foundational security skills</p>
+            <span class="cert-link">View credential <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
 
-    <div class="logo-card" data-aos="zoom-in">
-      <a href="https://www.coursera.org/account/accomplishments/specialization/IOQX2QNQCBID" target="_blank">
-        <img id="awsimg" src="images/aws.webp" alt="AWS Cloud">
-      </a>
-      <h4>AWS Solutions Architect Professional Certificate</h4>
-    </div>
+        <a href="https://www.credly.com/badges/4d84c1ea-6ae5-45b9-996c-68eed65dd0c3/public_url" target="_blank" class="cert-card reveal">
+          <div class="cert-img-wrap">
+            <img src="images/google-cybersecurity.png" alt="Google Cybersecurity">
+          </div>
+          <div class="cert-info">
+            <h4>Google Cybersecurity Professional Certificate</h4>
+            <p>8-course program covering threat analysis, SIEM tools, and incident response</p>
+            <span class="cert-link">View credential <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
 
-  </div>
-</section>
+        <a href="https://www.coursera.org/account/accomplishments/specialization/IOQX2QNQCBID" target="_blank" class="cert-card reveal">
+          <div class="cert-img-wrap aws-wrap">
+            <img src="images/aws.webp" alt="AWS">
+          </div>
+          <div class="cert-info">
+            <h4>AWS Solutions Architect Professional Certificate</h4>
+            <p>Comprehensive cloud architecture training covering AWS services, security, and design patterns</p>
+            <span class="cert-link">View credential <i class="fas fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
 
-  <section id="projects" class="section">
-    <h2 data-aos="fade-up">Projects</h2>
-    <div class="projects">
-      <div class="card" data-aos="zoom-in">
-        <h3>Air Gym</h3>
-        <p>JavaFX gym management system with SQL Server backend for members and sessions.</p>
-        <a href="https://github.com/Omar-Montaser/Air-Gym" target="_blank">GitHub →</a>
       </div>
-      <div class="card" data-aos="zoom-in">
-        <h3>Google Cybersecurity Projects</h3>
-        <p>Hands-on projects on vulnerability assessments, incident reporting, and NIST CSF framework.</p>
-        <a href="https://github.com/Omar-Montaser/Google-Cybersecurity" target="_blank">GitHub →</a>
-      </div>
-      <div class="card" data-aos="zoom-in">
-        <h3>Cadabra – E-Commerce App</h3>
-        <p>JavaFX e-commerce desktop app with layered architecture and secure authentication.</p>
-        <a href="https://github.com/Omar-Montaser/E-Commerce_App" target="_blank">GitHub →</a>
-      </div>
-      <div class="card" data-aos="zoom-in">
-      <h3>Social Sphere</h3>
-      <p>A C++ social network simulation with graph traversal and Graphviz visualization.</p>
-      <a href="https://github.com/Omar-Montaser/Social-Sphere" target="_blank">GitHub →</a>
     </div>
+  </section>
 
-    <div class="card" data-aos="zoom-in">
-      <h3>2048 Game</h3>
-      <p>Recreated the 2048 Game using C++ with full grid logic and score tracking.</p>
-      <a href="https://github.com/Omar-Montaser/2048-Game" target="_blank">GitHub →</a>
-    </div>
-    <div class="card" data-aos="zoom-in">
-      <h3>Fitness Tracker Website</h3>
-      <p>Nutrition and fitness tracking web app that helps users monitor calorie intake and workouts in real time.</p>
-      <a href="https://github.com/Omar-Montaser/Fitness-Tracker-Website" target="_blank">GitHub →</a>
-    </div>
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-label">04 / Projects</div>
+      <h2 class="section-title reveal">Things I've <em>built.</em></h2>
 
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/Omar-Montaser" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Secure Network Monitoring Lab</h3>
+          <p>Built a network monitoring lab using Cisco, GNS3, SnmpB, and Wireshark for SNMP-based management. Secured with SNMPv3 authPriv, configuring views, groups, and access control. Analyzed SNMP traffic to verify encrypted PDUs and manager–agent interactions.</p>
+          <div class="proj-tags">
+            <span>Cisco</span><span>GNS3</span><span>SNMPv3</span><span>Wireshark</span>
+          </div>
+        </div>
+
+        <div class="project-card featured reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-microchip"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/Omar-Montaser" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>FOS Operating System Kernel</h3>
+          <p>Implemented page fault handling and First Fit memory allocation in C via system calls. Optimized virtual memory using working set management, page buffering, and Modified Clock page replacement algorithm.</p>
+          <div class="proj-tags">
+            <span>C</span><span>Kernel</span><span>Virtual Memory</span><span>Page Fault</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-dumbbell"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/Omar-Montaser/Air-Gym" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Air Gym</h3>
+          <p>JavaFX gym management system with SQL Server backend. Secured with hashing, parameterized queries for SQL injection prevention, and transactional control under concurrency.</p>
+          <div class="proj-tags">
+            <span>Java</span><span>JavaFX</span><span>SQL Server</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-shield-virus"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/Omar-Montaser/Google-Cybersecurity" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Google Cybersecurity Projects</h3>
+          <p>Hands-on labs in vulnerability assessment, incident response, AAA frameworks, and NIST CSF application. Real-world security scenarios and documentation.</p>
+          <div class="proj-tags">
+            <span>NIST CSF</span><span>SIEM</span><span>Linux</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-shopping-cart"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/Omar-Montaser/E-Commerce_App" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Cadabra – E-Commerce App</h3>
+          <p>JavaFX e-commerce desktop app with layered architecture, secure authentication, and full product/order management workflow.</p>
+          <div class="proj-tags">
+            <span>Java</span><span>JavaFX</span><span>MVC</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-project-diagram"></i></div>
+            <div class="proj-links">
+              <a href="https://github.com/Omar-Montaser/Social-Sphere" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Social Sphere</h3>
+          <p>C++ social network simulation with graph traversal algorithms and Graphviz visualization. Demonstrates BFS/DFS on social connection graphs.</p>
+          <div class="proj-tags">
+            <span>C++</span><span>Graphs</span><span>Graphviz</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- Skills -->
-<section id="skills" class="section">
-  <h2 data-aos="fade-up">Technical Skills</h2>
-<div class="skills-container" data-aos="fade-up">
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-label">05 / Skills</div>
+      <h2 class="section-title reveal">Technical <em>toolkit.</em></h2>
 
-<div class="skill-category">
-  <h3><i class="fab fa-aws"></i> Cloud & Infrastructure</h3>
-  <div class="icons">
-    <span><i class="fab fa-linux"></i> Linux</span>
-    <span><i class="fas fa-network-wired"></i> VPC / Networking</span>
-    <span><i class="fas fa-shield-alt"></i> AWS Security</span>
-    <span><i class="fas fa-server"></i> EC2</span>
-    <span><i class="fas fa-database"></i> RDS</span>
-    <span><i class="fas fa-cubes"></i> Docker</span>
-    <span><i class="fas fa-cloud"></i> S3</span>
-    <span><i class="fas fa-lock"></i> IAM</span>
-    <span><i class="fas fa-sync-alt"></i> CloudFormation</span>
-    <span><i class="fas fa-project-diagram"></i> Lambda / Serverless</span>
-  </div>
-</div>
+      <div class="skills-layout">
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <i class="fab fa-aws"></i>
+            <h3>Cloud & Infrastructure</h3>
+          </div>
+          <div class="skill-pills">
+            <span>AWS EC2</span><span>S3</span><span>RDS</span><span>Lambda</span>
+            <span>IAM</span><span>VPC</span><span>CloudFormation</span><span>Docker</span>
+            <span>Linux</span><span>Google Cloud</span>
+          </div>
+        </div>
 
-  <div class="skill-category">
-    <h3><i class="fas fa-shield-alt"></i> Cybersecurity Tools</h3>
-    <div class="icons">
-      <span><i class="fas fa-network-wired"></i> Suricata</span>
-      <span><i class="fas fa-bug"></i> Wireshark</span>
-      <span><i class="fas fa-tachometer-alt"></i> Splunk</span>
-      <span><i class="fas fa-spider"></i> Burp Suite</span>
-      <span><i class="fas fa-terminal"></i> TCPDump</span>
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Cybersecurity</h3>
+          </div>
+          <div class="skill-pills">
+            <span>Wireshark</span><span>Suricata</span><span>Splunk</span>
+            <span>Burp Suite</span><span>TCPDump</span><span>Sophos</span>
+            <span>NIST CSF</span><span>VLAN/DHCP</span><span>SNMPv3</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <i class="fas fa-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-pills">
+            <span>Python</span><span>Java</span><span>C / C++</span>
+            <span>JavaScript</span><span>SQL</span><span>Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <div class="sg-header">
+            <i class="fas fa-layer-group"></i>
+            <h3>Frameworks & Tools</h3>
+          </div>
+          <div class="skill-pills">
+            <span>Django</span><span>React</span><span>Node.js</span>
+            <span>Express.js</span><span>MongoDB</span><span>Bootstrap</span>
+            <span>Git / GitHub</span><span>Jira</span><span>Figma</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="skill-category">
-    <h3><i class="fas fa-code"></i> Languages</h3>
-    <div class="icons">
-      <span><i class="fab fa-cuttlefish"></i> C / C++</span>
-      <span><i class="fab fa-java"></i> Java</span>
-      <span><i class="fab fa-python"></i> Python</span>
-      <span><i class="fab fa-js-square"></i> JavaScript</span>
+  <!-- Achievements -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-label">06 / Achievements</div>
+      <h2 class="section-title reveal">Beyond the <em>resume.</em></h2>
+      <div class="achievements-grid">
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h4>AWS Workshop Instructor</h4>
+          <p>Hosted a Cloud Computing workshop on AWS at the Egyptian Chinese University</p>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-flag"></i></div>
+          <h4>CTF Competitor</h4>
+          <p>Active in cybersecurity CTFs and TryHackMe labs, building hands-on exploitation and defense skills</p>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-code-branch"></i></div>
+          <h4>Codeforces Specialist</h4>
+          <p>Achieved Specialist rank, demonstrating strong problem-solving and algorithmic thinking</p>
+        </div>
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-brain"></i></div>
+          <h4>AI Research</h4>
+          <p>Conducted in-depth research on Neuralink's AI brain chip, exploring its impact on neuroscience and AI</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="skill-category">
-    <h3><i class="fas fa-server"></i> Technologies</h3>
-    <div class="icons">
-      <span><i class="fas fa-database"></i> SQL Server</span>
-      <span><i class="fab fa-django"></i> Django</span>
-      <span><i class="fab fa-bootstrap"></i> Bootstrap</span>
-      <span><i class="fas fa-leaf"></i> MongoDB</span>
-      <span><i class="fas fa-code-branch"></i> Express.js</span>
-      <span><i class="fab fa-react"></i> React</span>
-      <span><i class="fab fa-node-js"></i> Node.js</span>
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-label">07 / Contact</div>
+      <div class="contact-inner reveal">
+        <h2 class="section-title">Let's build something<br><em>great together.</em></h2>
+        <p class="contact-desc">Whether it's a security audit, cloud architecture, or just a conversation — I'm always open.</p>
+        <div class="contact-actions">
+          <a href="mailto:omarmontaser.my@gmail.com" class="btn-primary">
+            <i class="fas fa-envelope"></i> Send Email
+          </a>
+          <a href="tel:+201091456164" class="btn-ghost">
+            <i class="fas fa-phone"></i> +20 109 145 6164
+          </a>
+        </div>
+        <div class="contact-social">
+          <a href="https://github.com/Omar-Montaser" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/omar-montaser-b61245306" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="skill-category">
-    <h3><i class="fas fa-users"></i> Collaboration</h3>
-    <div class="icons">
-      <span><i class="fab fa-github"></i> GitHub</span>
-      <span><i class="fab fa-jira"></i> Jira</span>
-      <span><i class="fab fa-figma"></i> Figma</span>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">OM<span class="logo-dot">.</span></span>
+      <span>© 2025 Omar Montaser. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="https://github.com/Omar-Montaser" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/omar-montaser-b61245306" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
-  </div>
-
-</div>
-
-  
-</section>
-
-
-<!-- Contact -->
-<section id="contact" class="section contact" data-aos="fade-up">
-  <h2>Let's Connect</h2>
-  <p>Have a project or opportunity? Let’s talk.</p>
-  <div class="contact-links" data-aos="zoom-in">
-    <a href="mailto:omarmontaser.my@gmail.com" class="contact-btn">Send Email</a>
-    <a href="tel:+201091456164" class="contact-btn">Call Me</a>
-  </div>
-</section>
-  <footer>
-    <p>© 2025 Omar Montaser</p>
   </footer>
 
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-in-out'
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
