@@ -4,8 +4,9 @@
 
 /* ---- Typewriter ---- */
 const phrases = [
-  "Cybersecurity Engineer",
-  "Cloud Security Engineer"
+  "Computer Engineering Student",
+  "Aspiring Cloud Security Engineer",
+  "Cybersecurity & Cloud Computing"
 ];
 let phraseIndex = 0;
 let charIndex = 0;
