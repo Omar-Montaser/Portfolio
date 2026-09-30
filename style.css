@@ -1445,12 +1445,13 @@ details[open]>summary b,details[open]>summary>span[aria-hidden] {
   .contact-section p { max-width: 440px; }
 }
 
-/* A short opening question leads into the full introduction below. */
+/* A short hook leads into the full introduction below. */
 .hero { min-height: 720px; min-height: min(820px, 100svh); }
 .hero-content { padding-top: 190px; padding-bottom: 110px; }
 .hero .eyebrow { margin-bottom: 30px; gap: 11px; }
 .hero-discipline { color: #ab91b4; font-size: 9px; letter-spacing: 1.4px; }
 .hero h1 { font-size: clamp(58px, 6.8vw, 94px); line-height: 1.06; letter-spacing: -4px; }
+.hero-hook { margin-top: 23px; color: #c8b9cc; font-size: clamp(17px, 1.6vw, 22px); }
 .hero-actions { margin-top: 38px; }
 .hero-bottom { align-items: center; padding-block: 25px; }
 .hero-bottom .scroll-cue {
@@ -1478,6 +1479,7 @@ details[open]>summary b,details[open]>summary>span[aria-hidden] {
 .hero-content > * { animation: hero-arrive .8s cubic-bezier(.2,.65,.3,1) both; }
 .hero-content > :nth-child(2) { animation-delay: .1s; }
 .hero-content > :nth-child(3) { animation-delay: .2s; }
+.hero-content > :nth-child(4) { animation-delay: .3s; }
 .aurora { animation: aurora-breathe 10s ease-in-out infinite alternate; }
 @keyframes hero-arrive { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes scroll-signal { 0%, 15% { transform: translateX(-100%); } 65%, 100% { transform: translateX(100%); } }
